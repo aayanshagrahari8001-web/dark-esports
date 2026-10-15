@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DARK ESPORTS | Team Hub</title>
+<style>
+:root{--bg:#090909;--panel:#121212;--panel2:#171717;--gold:#d6ad55;--gold2:#f1d58a;--muted:#a7a7a7;--line:#302819;--white:#f5f3ee}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#211a0c 0%,#090909 42%);color:var(--white);font:15px/1.45 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.sidebar{padding:26px 17px;background:#0b0b0b;border-right:1px solid var(--line);position:sticky;top:0;height:100vh}.brand{font-weight:900;letter-spacing:2px;font-size:20px}.brand span{color:var(--gold)}.sub{font-size:11px;color:var(--muted);letter-spacing:2px;margin-top:5px}.nav{margin-top:34px;display:grid;gap:8px}.nav button{border:1px solid transparent;color:#ccc;background:transparent;text-align:left;padding:12px 13px;border-radius:10px}.nav button.active,.nav button:hover{background:linear-gradient(90deg,#30230c,#17130b);border-color:#59441b;color:var(--gold2)}.sidebar-foot{position:absolute;bottom:24px;color:#777;font-size:12px;line-height:1.7}.main{padding:28px clamp(16px,3vw,42px);min-width:0}.top{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:27px}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:2.5px;font-weight:800}.top h1{margin:5px 0 0;font-size:clamp(25px,3vw,36px);letter-spacing:-1px}.top-right{display:flex;align-items:center;gap:10px}.pill{border:1px solid #4c3a19;border-radius:999px;padding:8px 12px;color:var(--gold2);font-size:12px}.primary,.secondary,.danger{border-radius:9px;padding:10px 14px;font-weight:750;border:1px solid #8c6a25;background:linear-gradient(135deg,#e4bf68,#a87b27);color:#15110a}.secondary{background:#181818;color:var(--gold2);border-color:#463719}.danger{background:#261313;color:#ffb6a8;border-color:#5b2922}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.stat,.panel{background:linear-gradient(145deg,#171717,#101010);border:1px solid #29251d;border-radius:15px;padding:18px;box-shadow:0 10px 30px #0002}.stat label{color:#aaa;font-size:12px}.stat strong{display:block;font-size:30px;margin:8px 0 3px}.stat small{color:var(--gold);font-size:11px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:28px 0 13px}.section-head h2{font-size:18px;margin:0}.section-head p{color:var(--muted);margin:4px 0 0;font-size:12px}.content-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}.panel h3{margin:0 0 14px;font-size:15px}.empty{border:1px dashed #3b3427;border-radius:12px;padding:27px;text-align:center;color:#999}.empty b{display:block;color:#e7d6ae;margin-bottom:6px}.quick{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.quick button{background:#171717;color:#e9d7aa;border:1px solid #3b301b;border-radius:10px;padding:15px;text-align:left}.quick button span{display:block;color:#888;font-size:12px;margin-top:5px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}.toolbar input,.toolbar select,.field input,.field select,.field textarea{width:100%;background:#0b0b0b;border:1px solid #393329;color:#f5f3ee;border-radius:9px;padding:11px;outline:none}.toolbar input{max-width:330px}.table-wrap{overflow:auto;border:1px solid #2c2922;border-radius:12px}table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #29251e;font-size:13px}th{color:var(--gold2);background:#17150f;font-size:11px;letter-spacing:1px;text-transform:uppercase}td{color:#ddd}.player{display:flex;align-items:center;gap:10px}.avatar{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:linear-gradient(145deg,#4a3717,#17130b);border:1px solid #6e5425;color:#f3d88f;font-weight:900;overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover}.tag{display:inline-block;padding:4px 8px;border-radius:999px;font-size:10px;border:1px solid #51401e;color:var(--gold2)}.muted{color:#929292}.hidden{display:none!important}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field label{display:block;font-size:12px;color:#c9b887;margin-bottom:7px}.field.full{grid-column:1/-1}.field textarea{min-height:85px;resize:vertical}.form-actions{display:flex;gap:10px;margin-top:17px;flex-wrap:wrap}.note{color:#888;font-size:12px;margin-top:12px}.report-list{display:grid;gap:10px}.report{padding:13px;border:1px solid #2b271f;border-radius:11px;display:flex;justify-content:space-between;gap:12px}.report strong{display:block}.report small{color:#999}.footer{margin-top:30px;color:#686868;font-size:11px;text-align:center}.toast{position:fixed;right:20px;bottom:20px;background:#211a0c;border:1px solid #8c6a25;color:#f5dfaa;padding:12px 16px;border-radius:10px;display:none;z-index:10}
+@media(max-width:950px){.shell{grid-template-columns:1fr}.sidebar{height:auto;position:static;padding:18px}.sidebar-foot{display:none}.nav{display:flex;overflow:auto;margin-top:17px}.nav button{white-space:nowrap;padding:9px 11px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.content-grid{grid-template-columns:1fr}.main{padding-top:20px}}
+@media(max-width:560px){.top{align-items:flex-start;flex-direction:column}.top-right{width:100%;justify-content:space-between}.grid{gap:9px}.stat{padding:13px}.stat strong{font-size:25px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.quick{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand">DARK <span>ESPORTS</span></div><div class="sub">TEAM PERFORMANCE HUB</div>
+  <nav class="nav" id="nav">
+    <button class="active" data-page="dashboard">◈ &nbsp; Dashboard</button>
+    <button data-page="current">♟ &nbsp; Current Players</button>
+    <button data-page="past">◷ &nbsp; Past Players</button>
+    <button data-page="reports">▤ &nbsp; Daily Reports</button>
+    <button data-page="matches">⚔ &nbsp; Scrims & Tournaments</button>
+    <button data-page="assessment">★ &nbsp; Player Assessment</button>
+  </nav>
+  <div class="sidebar-foot">MATTE BLACK · GOLD EDITION<br>Prototype v1.0<br><span style="color:#a88a4a">Own the grind. Track the legacy.</span></div>
+</aside>
+<main class="main">
+  <header class="top"><div><div class="eyebrow">TEAM OPERATIONS / 2026</div><h1 id="pageTitle">Team Dashboard</h1></div><div class="top-right"><span class="pill">● LOCAL PREVIEW</span><button class="primary" id="addPlayerTop">+ Add Player</button></div></header>
+
+  <section id="dashboard" class="page">
+    <div class="grid">
+      <div class="stat"><label>Current Players</label><strong id="currentCount">0</strong><small>ACTIVE ROSTER</small></div>
+      <div class="stat"><label>Past Players</label><strong id="pastCount">0</strong><small>TEAM HISTORY</small></div>
+      <div class="stat"><label>Reports Logged</label><strong id="reportCount">0</strong><small>DAILY ACTIVITY</small></div>
+      <div class="stat"><label>Matches Recorded</label><strong id="matchCount">0</strong><small>SCRIMS & EVENTS</small></div>
+    </div>
+    <div class="section-head"><div><h2>Roster at a glance</h2><p>Current players appear here. Select a player to manage their details.</p></div><button class="secondary" data-go="current">View roster →</button></div>
+    <div class="content-grid">
+      <div class="panel"><h3>Current Roster</h3><div id="dashRoster" class="empty"><b>No players added yet</b>Add your first player to start building the team record.</div></div>
+      <div class="panel"><h3>Quick Actions</h3><div class="quick">
+        <button data-go="playerForm">＋ Add player<span>Player profile and dates</span></button>
+        <button data-go="reportForm">▤ Log daily report<span>Training and ranked stats</span></button>
+        <button data-go="matchForm">⚔ Add match result<span>Scrim or tournament</span></button>
+        <button data-go="assessment">★ Assess player<span>Skills and consistency</span></button>
+      </div></div>
+    </div>
+    <div class="section-head"><div><h2>Recent Activity</h2><p>Latest reports saved in this browser preview.</p></div></div>
+    <div class="panel"><div id="recentReports" class="empty"><b>Nothing recorded yet</b>Daily reports will show here once added.</div></div>
+  </section>
+
+  <section id="current" class="page hidden"><div class="toolbar"><input id="currentSearch" placeholder="Search current players…"><button class="primary" data-go="playerForm">+ Add Player</button></div><div class="panel"><div id="currentTable" class="empty"><b>No current players</b>Add players using the button above.</div></div></section>
+  <section id="past" class="page hidden"><div class="toolbar"><input id="pastSearch" placeholder="Search past players…"></div><div class="panel"><div id="pastTable" class="empty"><b>No past players yet</b>When a player leaves, change their status to Past to preserve their history.</div></div></section>
+
+  <section id="playerForm" class="page hidden"><div class="panel"><h3 id="playerFormTitle">Add Player Profile</h3><form id="playerFormEl"><input type="hidden" id="playerId"><div class="form-grid">
+    <div class="field"><label>Player Name *</label><input id="pName" required placeholder="e.g. LORD"></div>
+    <div class="field"><label>In-game Name / IGN</label><input id="pIgn" placeholder="Player IGN"></div>
+    <div class="field"><label>Role / Position</label><select id="pRole"><option>Assaulter</option><option>IGL</option><option>Support</option><option>Sniper</option><option>Flex</option><option>Substitute</option></select></div>
+    <div class="field"><label>Status</label><select id="pStatus"><option value="current">Current Player</option><option value="past">Past Player</option></select></div>
+    <div class="field"><label>Joining Date</label><input id="pJoin" type="date"></div>
+    <div class="field"><label>Leaving Date</label><input id="pLeave" type="date"></div>
+    <div class="field"><label>Profile Picture</label><input id="pPhoto" type="file" accept="image/*"></div>
+    <div class="field"><label>Character / In-game Photo</label><input id="pCharacter" type="file" accept="image/*"></div>
+    <div class="field full"><label>Notes</label><textarea id="pNotes" placeholder="Player strengths, contact notes, role details…"></textarea></div>
+  </div><div class="form-actions"><button class="primary" type="submit">Save Player</button><button class="secondary" type="button" data-go="current">Cancel</button></div><p class="note">Prototype note: photos and records are saved only in this browser. This is not yet a shared online website.</p></form></div></section>
+
+  <section id="reports" class="page hidden"><div class="section-head" style="margin-top:0"><div><h2>Daily Player Reports</h2><p>Track what each player did each day.</p></div><button class="primary" data-go="reportForm">+ Add Report</button></div><div class="panel"><div id="reportTable" class="empty"><b>No daily reports</b>Add a report to begin tracking performance.</div></div></section>
+  <section id="reportForm" class="page hidden"><div class="panel"><h3>Log Daily Report</h3><form id="reportFormEl"><div class="form-grid">
+    <div class="field"><label>Player *</label><select id="rPlayer" required></select></div><div class="field"><label>Date *</label><input id="rDate" type="date" required></div>
+    <div class="field"><label>BR Ranked Matches</label><input id="rBr" type="number" min="0" value="0"></div><div class="field"><label>BR Ranked Eliminations</label><input id="rBrKills" type="number" min="0" value="0"></div>
+    <div class="field"><label>CS Ranked Matches</label><input id="rCs" type="number" min="0" value="0"></div><div class="field"><label>CS Ranked Eliminations</label><input id="rCsKills" type="number" min="0" value="0"></div>
+    <div class="field"><label>Normal Matches</label><input id="rNormal" type="number" min="0" value="0"></div><div class="field"><label>Training Rounds</label><input id="rTraining" type="number" min="0" value="0"></div>
+    <div class="field"><label>Training Minutes</label><input id="rMinutes" type="number" min="0" value="0"></div><div class="field"><label>Lobby / Custom Practice (minutes)</label><input id="rLobby" type="number" min="0" value="0"></div>
+    <div class="field"><label>Scrims Played</label><input id="rScrims" type="number" min="0" value="0"></div><div class="field"><label>Scrim Wins</label><input id="rScrimWins" type="number" min="0" value="0"></div>
+    <div class="field"><label>Tournaments Played</label><input id="rTourn" type="number" min="0" value="0"></div><div class="field"><label>Tournament Wins</label><input id="rTournWins" type="number" min="0" value="0"></div>
+    <div class="field full"><label>What did they do / miss today?</label><textarea id="rNotes" placeholder="Attendance, effort, issues, strengths, missed practice…"></textarea></div>
+    <div class="field full"><label>Attach screenshot (optional)</label><input id="rShot" type="file" accept="image/*"></div>
+  </div><div class="form-actions"><button class="primary" type="submit">Save Daily Report</button><button class="secondary" type="button" data-go="reports">Cancel</button></div><p class="note">Screenshot attachments are stored locally in this preview only. Online sync and secure accounts require backend setup.</p></form></div></section>
+
+  <section id="matches" class="page hidden"><div class="section-head" style="margin-top:0"><div><h2>Scrims & Tournaments</h2><p>Log match outcomes and team results.</p></div><button class="primary" data-go="matchForm">+ Add Result</button></div><div class="panel"><div id="matchTable" class="empty"><b>No matches recorded</b>Record scrims, tournaments, wins and losses here.</div></div></section>
+  <section id="matchForm" class="page hidden"><div class="panel"><h3>Add Scrim / Tournament Result</h3><form id="matchFormEl"><div class="form-grid">
+    <div class="field"><label>Event Type *</label><select id="mType"><option>Scrim</option><option>Tournament</option><option>Custom Room</option></select></div><div class="field"><label>Event / Opponent *</label><input id="mName" required placeholder="Event name or opponent"></div>
+    <div class="field"><label>Date *</label><input id="mDate" type="date" required></div><div class="field"><label>Result</label><select id="mResult"><option>Win</option><option>Loss</option><option>Draw</option><option>In Progress</option></select></div>
+    <div class="field"><label>Placement / Rank</label><input id="mPlacement" placeholder="e.g. 1st / 4th"></div><div class="field"><label>Total Eliminations</label><input id="mKills" type="number" min="0" value="0"></div>
+    <div class="field full"><label>Notes / What went well or wrong?</label><textarea id="mNotes"></textarea></div>
+    <div class="field full"><label>Screenshot (optional)</label><input id="mShot" type="file" accept="image/*"></div>
+  </div><div class="form-actions"><button class="primary" type="submit">Save Result</button><button class="secondary" type="button" data-go="matches">Cancel</button></div></form></div></section>
+
+  <section id="assessment" class="page hidden"><div class="section-head" style="margin-top:0"><div><h2>Player Assessment</h2><p>Rate skills out of 10 and keep notes on improvement.</p></div></div><div class="panel"><form id="assessmentForm"><div class="form-grid">
+    <div class="field"><label>Player *</label><select id="aPlayer" required></select></div><div class="field"><label>Assessment Date</label><input id="aDate" type="date" required></div>
+    <div class="field"><label>Aim / Mechanics (0–10)</label><input id="aAim" type="number" min="0" max="10" value="5"></div><div class="field"><label>Game Sense (0–10)</label><input id="aSense" type="number" min="0" max="10" value="5"></div>
+    <div class="field"><label>Teamwork (0–10)</label><input id="aTeam" type="number" min="0" max="10" value="5"></div><div class="field"><label>Consistency (0–10)</label><input id="aCons" type="number" min="0" max="10" value="5"></div>
+    <div class="field"><label>Discipline / Attendance (0–10)</label><input id="aDisc" type="number" min="0" max="10" value="5"></div><div class="field"><label>Clutch / Decision-making (0–10)</label><input id="aClutch" type="number" min="0" max="10" value="5"></div>
+    <div class="field full"><label>Coach / Manager Notes</label><textarea id="aNotes"></textarea></div>
+  </div><div class="form-actions"><button class="primary" type="submit">Save Assessment</button></div></form><div style="height:1px;background:#302819;margin:22px 0"></div><div id="assessmentList" class="empty"><b>No assessments yet</b>Saved assessments will appear here.</div></div></section>
+  <div class="footer">DARK ESPORTS · Golden Dark / Matte Black · Prototype only — not yet a live shared website</div>
+</main></div><div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id);
+let players=[],reports=[],matches=[],assessments=[],photoData={};
+const today=()=>new Date().toISOString().slice(0,10);
+['rDate','mDate','aDate'].forEach(id=>$(id).value=today());
+function toast(msg){const t=$('toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',2600)}
+function go(page){document.querySelectorAll('.page').forEach(p=>p.classList.add('hidden'));$(page).classList.remove('hidden');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));const titles={dashboard:'Team Dashboard',current:'Current Players',past:'Past Players',reports:'Daily Reports',matches:'Scrims & Tournaments',assessment:'Player Assessment',playerForm:'Player Profile',reportForm:'Daily Report Entry',matchForm:'Match Result'};$('pageTitle').textContent=titles[page]||'DARK ESPORTS';render()}
+document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>go(b.dataset.page));
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));
+$('addPlayerTop').onclick=()=>{resetPlayerForm();go('playerForm')};
+function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function fileToData(file){return new Promise(resolve=>{if(!file)return resolve('');const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=()=>resolve('');r.readAsDataURL(file)})}
+function avatar(p){return p.photo?`<div class="avatar"><img src="${p.photo}" alt=""></div>`:`<div class="avatar">${esc((p.name||'?').slice(0,2).toUpperCase())}</div>`}
+function playerTable(list){if(!list.length)return '<div class="empty"><b>No players here yet</b>Add a profile to start tracking this roster.</div>';return `<div class="table-wrap"><table><thead><tr><th>Player</th><th>Role</th><th>Joined</th><th>Left</th><th>Status</th><th>Actions</th></tr></thead><tbody>${list.map(p=>`<tr><td><div class="player">${avatar(p)}<div><strong>${esc(p.name)}</strong><div class="muted">${esc(p.ign||'No IGN added')}</div>${p.character?'<span class="tag">Character photo</span>':''}</div></div></td><td>${esc(p.role)}</td><td>${esc(p.join||'—')}</td><td>${esc(p.leave||'—')}</td><td><span class="tag">${p.status==='current'?'CURRENT':'PAST'}</span></td><td><button class="secondary" onclick="editPlayer('${p.id}')">Edit</button> <button class="secondary" onclick="togglePlayer('${p.id}')">${p.status==='current'?'Move to Past':'Make Current'}</button></td></tr>`).join('')}</tbody></table></div>`}
+function render(){const current=players.filter(p=>p.status==='current'),past=players.filter(p=>p.status==='past');$('currentCount').textContent=current.length;$('pastCount').textContent=past.length;$('reportCount').textContent=reports.length;$('matchCount').textContent=matches.length;
+$('currentTable').innerHTML=playerTable(current.filter(p=>(p.name+' '+p.ign).toLowerCase().includes(($('currentSearch')?.value||'').toLowerCase())));
+$('pastTable').innerHTML=playerTable(past.filter(p=>(p.name+' '+p.ign).toLowerCase().includes(($('pastSearch')?.value||'').toLowerCase())));
+$('dashRoster').innerHTML=current.length?`<div class="report-list">${current.slice(0,5).map(p=>`<div class="report"><div class="player">${avatar(p)}<div><strong>${esc(p.name)}</strong><small>${esc(p.ign||p.role)} · Joined ${esc(p.join||'date not set')}</small></div></div><span class="tag">ACTIVE</span></div>`).join('')}</div>`:'<div class="empty"><b>No players added yet</b>Add your first player to start building the team record.</div>';
+$('reportTable').innerHTML=reports.length?`<div class="table-wrap"><table><thead><tr><th>Date / Player</th><th>BR (M / Elims)</th><th>CS (M / Elims)</th><th>Training</th><th>Scrims / Wins</th><th>Notes</th></tr></thead><tbody>${[...reports].reverse().map(r=>`<tr><td><strong>${esc(r.playerName)}</strong><div class="muted">${esc(r.date)}</div></td><td>${r.br} / ${r.brKills}</td><td>${r.cs} / ${r.csKills}</td><td>${r.training} rounds · ${r.minutes} min</td><td>${r.scrims} / ${r.scrimWins}</td><td>${esc(r.notes||'—')}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty"><b>No daily reports</b>Add a report to begin tracking performance.</div>';
+$('matchTable').innerHTML=matches.length?`<div class="table-wrap"><table><thead><tr><th>Date</th><th>Type / Event</th><th>Result</th><th>Placement</th><th>Eliminations</th><th>Notes</th></tr></thead><tbody>${[...matches].reverse().map(m=>`<tr><td>${esc(m.date)}</td><td><strong>${esc(m.type)}</strong><div class="muted">${esc(m.name)}</div></td><td><span class="tag">${esc(m.result)}</span></td><td>${esc(m.placement||'—')}</td><td>${m.kills}</td><td>${esc(m.notes||'—')}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty"><b>No matches recorded</b>Record scrims, tournaments, wins and losses here.</div>';
+$('recentReports').innerHTML=reports.length?`<div class="report-list">${[...reports].reverse().slice(0,4).map(r=>`<div class="report"><div><strong>${esc(r.playerName)} <span class="muted">· ${esc(r.date)}</span></strong><small>BR ${r.br} matches · CS ${r.cs} matches · ${r.training} training rounds</small></div><span class="tag">LOGGED</span></div>`).join('')}</div>`:'<div class="empty"><b>Nothing recorded yet</b>Daily reports will show here once added.</div>';
+const opts='<option value="">Select player</option>'+players.map(p=>`<option value="${p.id}">${esc(p.name)} (${p.status==='current'?'Current':'Past'})</option>`).join('');$('rPlayer').innerHTML=opts;$('aPlayer').innerHTML=opts;
+$('assessmentList').innerHTML=assessments.length?`<div class="report-list">${[...assessments].reverse().map(a=>`<div class="report"><div><strong>${esc(a.name)} · ${a.avg}/10</strong><small>${esc(a.date)} · Aim ${a.aim}, Game sense ${a.sense}, Teamwork ${a.team}, Consistency ${a.cons}, Discipline ${a.disc}, Clutch ${a.clutch}</small><div class="muted">${esc(a.notes||'')}</div></div><span class="tag">ASSESSED</span></div>`).join('')}</div>`:'<div class="empty"><b>No assessments yet</b>Saved assessments will appear here.</div>';
+}
+function resetPlayerForm(){ $('playerFormEl').reset();$('playerId').value='';$('playerFormTitle').textContent='Add Player Profile'}
+function editPlayer(id){const p=players.find(x=>x.id===id);if(!p)return;go('playerForm');$('playerFormTitle').textContent='Edit Player Profile';$('playerId').value=p.id;$('pName').value=p.name;$('pIgn').value=p.ign;$('pRole').value=p.role;$('pStatus').value=p.status;$('pJoin').value=p.join;$('pLeave').value=p.leave;$('pNotes').value=p.notes||''}
+function togglePlayer(id){const p=players.find(x=>x.id===id);if(!p)return;p.status=p.status==='current'?'past':'current';if(p.status==='past'&&!p.leave)p.leave=today();if(p.status==='current')p.leave='';render();toast('Player status updated')}
+$('playerFormEl').onsubmit=async e=>{e.preventDefault();const id=$('playerId').value||String(Date.now());let p=players.find(x=>x.id===id)||{id};p.name=$('pName').value.trim();p.ign=$('pIgn').value.trim();p.role=$('pRole').value;p.status=$('pStatus').value;p.join=$('pJoin').value;p.leave=$('pLeave').value;p.notes=$('pNotes').value;
+const photo=await fileToData($('pPhoto').files[0]),character=await fileToData($('pCharacter').files[0]);if(photo)p.photo=photo;if(character)p.character=character;if(!players.some(x=>x.id===id))players.push(p);render();go(p.status);toast('Player saved in this browser')};
+$('reportFormEl').onsubmit=async e=>{e.preventDefault();const p=players.find(x=>x.id===$('rPlayer').value);if(!p){toast('Please add/select a player first');return}const shot=await fileToData($('rShot').files[0]);reports.push({id:Date.now(),playerId:p.id,playerName:p.name,date:$('rDate').value,br:+$('rBr').value,brKills:+$('rBrKills').value,cs:+$('rCs').value,csKills:+$('rCsKills').value,normal:+$('rNormal').value,training:+$('rTraining').value,minutes:+$('rMinutes').value,lobby:+$('rLobby').value,scrims:+$('rScrims').value,scrimWins:+$('rScrimWins').value,tourn:+$('rTourn').value,tournWins:+$('rTournWins').value,notes:$('rNotes').value,shot});$('reportFormEl').reset();$('rDate').value=today();render();go('reports');toast('Daily report saved in this browser')};
+$('matchFormEl').onsubmit=async e=>{e.preventDefault();const shot=await fileToData($('mShot').files[0]);matches.push({id:Date.now(),type:$('mType').value,name:$('mName').value,date:$('mDate').value,result:$('mResult').value,placement:$('mPlacement').value,kills:+$('mKills').value,notes:$('mNotes').value,shot});$('matchFormEl').reset();$('mDate').value=today();render();go('matches');toast('Match result saved in this browser')};
+$('assessmentForm').onsubmit=e=>{e.preventDefault();const p=players.find(x=>x.id===$('aPlayer').value);if(!p){toast('Please add/select a player first');return}const a={id:Date.now(),name:p.name,date:$('aDate').value,aim:+$('aAim').value,sense:+$('aSense').value,team:+$('aTeam').value,cons:+$('aCons').value,disc:+$('aDisc').value,clutch:+$('aClutch').value,notes:$('aNotes').value};a.avg=((a.aim+a.sense+a.team+a.cons+a.disc+a.clutch)/6).toFixed(1);assessments.push(a);render();toast('Assessment saved in this browser')};
+$('currentSearch').oninput=render;$('pastSearch').oninput=render;
+document.querySelectorAll('[data-go="playerForm"]').forEach(b=>b.addEventListener('click',resetPlayerForm));
+render();
+</script>
+</body></html>
