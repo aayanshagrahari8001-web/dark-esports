@@ -96,6 +96,7 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{display:g
   </div><div class="form-actions"><button class="primary" type="submit">Save Assessment</button></div></form><div style="height:1px;background:#302819;margin:22px 0"></div><div id="assessmentList" class="empty"><b>No assessments yet</b>Saved assessments will appear here.</div></div></section>
   <div class="footer">DARK ESPORTS · Golden Dark / Matte Black · Prototype only — not yet a live shared website</div>
 </main></div><div class="toast" id="toast"></div>
+\'\<div id="login-form"\>\</div>div\>\'
 <script>
 const $=id=>document.getElementById(id);
 let players=[],reports=[],matches=[],assessments=[],photoData={};
@@ -133,6 +134,8 @@ document.querySelectorAll('[data-go="playerForm"]').forEach(b=>b.addEventListene
 render();
 </script>
   <script type="module">
+    import {getauth,signinwithemailandpassword,signinwithpopup} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js";
+    const auth = getAuth(app);
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-analytics.js";
