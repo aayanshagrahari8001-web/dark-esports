@@ -132,4 +132,22 @@ $('currentSearch').oninput=render;$('pastSearch').oninput=render;
 document.querySelectorAll('[data-go="playerForm"]').forEach(b=>b.addEventListener('click',resetPlayerForm));
 render();
 </script>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCXTxDhmEbm00uH44iugnNPfxdyb5WGF-I",
+    authDomain: "darkesportshub.firebaseapp.com",
+    projectId: "darkesportshub",
+    storageBucket: "darkesportshub.firebasestorage.app",
+    messagingSenderId: "1088434850245",
+    appId: "1:1088434850245:web:c7b842637fade4366b23ac",
+    measurementId: "G-RCRPXGESYC"
+  };
 </body></html>
